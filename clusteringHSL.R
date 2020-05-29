@@ -1,12 +1,12 @@
-# Clustering de imágenes en espacio HSL con R
-# www.datosimagensonido.com
+# Clustering de imÃ¡genes en espacio HSL con R
+# www.overfitting.net
 
 library(tiff)
 
 # Leemos imagen
 imagen=readTIFF("marmenor.tif", native=F, convert=F)
 
-# CONVERSIÓN RGB -> HSL VECTORIZADA
+# CONVERSIÃ“N RGB -> HSL VECTORIZADA
 R=imagen[,,1]
 G=imagen[,,2]
 B=imagen[,,3]
@@ -63,6 +63,6 @@ histoH=hist(as.integer(subset(M, select = c("H"))*360), breaks=c(0:360), right=F
 xaxis=0:359
 ylimits=c(0,max(histoH$counts))
 plot(xaxis, histoH$counts, type='h', col='blue' ,
-     main="Histograma H", xlab="Hue [0..359]", ylab="Núm. píxeles", ylim=ylimits)
+     main="Histograma H", xlab="Hue [0..359]", ylab="NÃºm. pÃ­xeles", ylim=ylimits)
 abline(v=round(kmeansfit$centers*360), col='red')  # Centroides
 
