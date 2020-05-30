@@ -1,5 +1,6 @@
 # Clustering de imágenes en espacio HSL con R
 # www.overfitting.net
+# https://www.overfitting.net/2017/10/clustering-en-imagenes-de-teledeteccion.html
 
 library(tiff)
 
